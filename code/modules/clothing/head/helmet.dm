@@ -471,3 +471,47 @@
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/head.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/head.dmi'
 	)
+/obj/item/clothing/head/helmet/biker
+	name = "Motorcycle helmet"
+	desc = "Самый обычный мотоциклетный шлем."
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 30, "energy" = 30, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
+	icon_state = "biker"
+	item_state = "biker"
+	flags_inv = HIDEMASK|HIDEHEADSETS|HIDEGLASSES|HIDEHAIR
+	flags_cover = HEADCOVERSEYES|HEADCOVERSMOUTH
+	var/paintable = TRUE
+	sprite_sheets = list(
+		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/head.dmi'
+	)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SLIMEPERSON, SPECIES_SKELETON, SPECIES_NUCLEATION, SPECIES_MACNINEPERSON, SPECIES_DIONA, SPECIES_SHADOW_BASIC, SPECIES_MONKEY)
+
+obj/item/clothing/head/helmet/biker/Initialize(mapload)
+	. = ..()
+	if(!color && paintable)
+		color = "#161515"
+	update_icon(UPDATE_OVERLAYS)
+
+
+/obj/item/clothing/head/helmet/biker/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/toy/crayon/spraycan))
+		var/obj/item/toy/crayon/spraycan/can = I
+		if(!paintable)
+			to_chat(user, span_warning("You cannot paint [src]."))
+			return ATTACK_CHAIN_PROCEED|ATTACK_CHAIN_NO_AFTERATTACK
+		if(can.capped)
+			to_chat(user, span_warning("The cap on [can] is sealed."))
+			return ATTACK_CHAIN_PROCEED|ATTACK_CHAIN_NO_AFTERATTACK
+		to_chat(user, span_notice("You paint [src]."))
+		playsound(user.loc, 'sound/effects/spray.ogg', 20, TRUE)
+		color = can.colour
+		update_icon(UPDATE_OVERLAYS)
+		return ATTACK_CHAIN_PROCEED_SUCCESS|ATTACK_CHAIN_NO_AFTERATTACK
+
+	return ..()
+
+
+/obj/item/clothing/head/helmet/biker/update_overlays()
+	. = ..()
+	if(color)
+		var/mutable_appearance/biker_overlay = mutable_appearance(icon='icons/obj/clothing/hats.dmi', icon_state = "biker_overlay")
+		. += biker_overlay
