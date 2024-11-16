@@ -515,3 +515,5 @@ obj/item/clothing/head/helmet/biker/Initialize(mapload)
 	if(color)
 		var/mutable_appearance/biker_overlay = mutable_appearance(icon='icons/obj/clothing/hats.dmi', icon_state = "biker_overlay")
 		. += biker_overlay
+
+/// To rerun tests
