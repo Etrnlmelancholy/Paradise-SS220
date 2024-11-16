@@ -485,12 +485,11 @@
 	)
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SLIMEPERSON, SPECIES_SKELETON, SPECIES_NUCLEATION, SPECIES_MACNINEPERSON, SPECIES_DIONA, SPECIES_SHADOW_BASIC, SPECIES_MONKEY)
 
-obj/item/clothing/head/helmet/biker/Initialize(mapload)
+/obj/item/clothing/head/helmet/biker/Initialize(mapload)
 	. = ..()
 	if(!color && paintable)
 		color = "#161515"
 	update_icon(UPDATE_OVERLAYS)
-
 
 /obj/item/clothing/head/helmet/biker/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/toy/crayon/spraycan))
@@ -515,5 +514,3 @@ obj/item/clothing/head/helmet/biker/Initialize(mapload)
 	if(color)
 		var/mutable_appearance/biker_overlay = mutable_appearance(icon='icons/obj/clothing/hats.dmi', icon_state = "biker_overlay")
 		. += biker_overlay
-
-/// To rerun tests
