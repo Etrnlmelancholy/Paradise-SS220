@@ -135,6 +135,7 @@
 				/obj/item/stack/tape_roll = 10,
 				/obj/item/storage/bag/plasticbag = 20,
 				/obj/item/caution = 10,
+				/obj/item/clothing/head/helmet/biker = 2,
 				////////////////CONTRABAND STUFF//////////////////
 				/obj/item/grenade/clown_grenade = 3,
 				/obj/item/seeds/ambrosia/cruciatus = 3,
@@ -163,7 +164,7 @@
 				/obj/item/storage/pill_bottle/fakedeath = 2,
 				/obj/item/storage/box/syndie_kit/mr_chang_technique = 1,
 				/obj/item/clothing/glasses/chameleon/meson = 7,
-				"" = 61
+				"" = 59
 				)
 
 /obj/effect/spawner/lootdrop/maintenance/double
