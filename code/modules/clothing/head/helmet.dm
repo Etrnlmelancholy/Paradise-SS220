@@ -493,7 +493,7 @@
 
 /obj/item/clothing/head/helmet/biker/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/spraycan_paintable)
+	AddComponent(/datum/component/paintable)
 
 
 /obj/item/clothing/head/helmet/biker/update_overlays()
