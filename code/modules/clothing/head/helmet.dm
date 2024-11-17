@@ -491,22 +491,9 @@
 		color = "#161515"
 	update_icon(UPDATE_OVERLAYS)
 
-/obj/item/clothing/head/helmet/biker/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/toy/crayon/spraycan))
-		var/obj/item/toy/crayon/spraycan/can = I
-		if(!paintable)
-			to_chat(user, span_warning("You cannot paint [src]."))
-			return ATTACK_CHAIN_PROCEED|ATTACK_CHAIN_NO_AFTERATTACK
-		if(can.capped)
-			to_chat(user, span_warning("The cap on [can] is sealed."))
-			return ATTACK_CHAIN_PROCEED|ATTACK_CHAIN_NO_AFTERATTACK
-		to_chat(user, span_notice("You paint [src]."))
-		playsound(user.loc, 'sound/effects/spray.ogg', 20, TRUE)
-		color = can.colour
-		update_icon(UPDATE_OVERLAYS)
-		return ATTACK_CHAIN_PROCEED_SUCCESS|ATTACK_CHAIN_NO_AFTERATTACK
-
-	return ..()
+/obj/item/clothing/head/helmet/biker/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/spraycan_paintable)
 
 
 /obj/item/clothing/head/helmet/biker/update_overlays()
