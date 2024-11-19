@@ -480,6 +480,7 @@
 	flags_inv = HIDEMASK|HIDEHEADSETS|HIDEGLASSES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES|HEADCOVERSMOUTH
 	var/paintable = TRUE
+	color = "#161515"
 	sprite_sheets = list(
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/head.dmi'
 	)
@@ -487,17 +488,13 @@
 
 /obj/item/clothing/head/helmet/biker/Initialize(mapload)
 	. = ..()
-	if(!color && paintable)
-		color = "#161515"
 	update_icon(UPDATE_OVERLAYS)
 
 /obj/item/clothing/head/helmet/biker/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
 
-
 /obj/item/clothing/head/helmet/biker/update_overlays()
 	. = ..()
-	if(color)
 		var/mutable_appearance/biker_overlay = mutable_appearance(icon='icons/obj/clothing/hats.dmi', icon_state = "biker_overlay")
 		. += biker_overlay
