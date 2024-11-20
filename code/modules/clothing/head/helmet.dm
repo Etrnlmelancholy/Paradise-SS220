@@ -479,7 +479,6 @@
 	item_state = "biker"
 	flags_inv = HIDEMASK|HIDEHEADSETS|HIDEGLASSES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES|HEADCOVERSMOUTH
-	var/paintable = TRUE
 	color = "#161515"
 	sprite_sheets = list(
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/head.dmi'
