@@ -471,6 +471,7 @@
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/head.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/head.dmi'
 	)
+
 /obj/item/clothing/head/helmet/biker
 	name = "Motorcycle helmet"
 	desc = "Самый обычный мотоциклетный шлем."
