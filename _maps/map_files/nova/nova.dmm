@@ -97079,7 +97079,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint3)
 "oqt" = (
-/obj/effect/landmark/start/barber,
 /turf/simulated/floor/wood/oak,
 /area/civilian/barber)
 "oqu" = (
@@ -131759,7 +131758,6 @@
 /obj/structure/chair/comfy/black{
 	dir = 4
 	},
-/obj/effect/landmark/start/barber,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "dark"

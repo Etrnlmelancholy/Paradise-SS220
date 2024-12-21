@@ -8275,7 +8275,6 @@
 	},
 /area/quartermaster/storage)
 "bkY" = (
-/obj/effect/landmark/start/barber,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
@@ -88251,7 +88250,6 @@
 /obj/structure/chair/barber{
 	dir = 8
 	},
-/obj/effect/landmark/start/barber,
 /turf/simulated/floor/plasteel{
 	icon_state = "barber"
 	},

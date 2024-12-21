@@ -16339,7 +16339,6 @@
 	scrub_N2O = 1;
 	scrub_Toxins = 1
 	},
-/obj/effect/landmark/start/barber,
 /turf/simulated/floor/plasteel{
 	icon_state = "barber"
 	},
