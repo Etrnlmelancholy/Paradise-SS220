@@ -48,3 +48,38 @@
 	name = "Monobrows"
 	species_allowed = list(SPECIES_HUMAN)
 	icon_state = "mono_eyebrows"
+
+/datum/sprite_accessory/body_markings/cybernetics/cybershoulders
+	name = "Cybernetic neck and shoulders (man)"
+	species_allowed = list(SPECIES_HUMAN)
+	icon_state = "shouldersm"
+
+/datum/sprite_accessory/body_markings/cybernetics/cybershouldersalt
+	name = "Cybernetic neck and shoulders (female)"
+	species_allowed = list(SPECIES_HUMAN)
+	icon_state = "shouldersw"
+
+/datum/sprite_accessory/body_markings/cybernetics/cybershouldersandjaw
+	name = "Cybernetic neck, shoulders and jaw (man)"
+	species_allowed = list(SPECIES_HUMAN)
+	icon_state = "shouldersjawm"
+
+/datum/sprite_accessory/body_markings/cybernetics/cybershouldersandjawalt
+	name = "Cybernetic neck, shoulders and jaw (female)"
+	species_allowed = list(SPECIES_HUMAN)
+	icon_state = "shouldersjaww"
+
+/datum/sprite_accessory/body_markings/cybernetics/cyberjaw
+	name = "Cybernetic jaw"
+	species_allowed = list(SPECIES_HUMAN)
+	icon_state = "cyberjaw"
+
+/datum/sprite_accessory/body_markings/cybernetics/cybereyeaddon
+	name = "Cybernetic eyes addon"
+	species_allowed = list(SPECIES_HUMAN)
+	icon_state = "cybeyes"
+
+/datum/sprite_accessory/body_markings/cybernetics/cyberjawandeyes
+	name = "Cybernetic eyes addon and jaw"
+	species_allowed = list(SPECIES_HUMAN)
+	icon_state = "cyberjaweyes"
