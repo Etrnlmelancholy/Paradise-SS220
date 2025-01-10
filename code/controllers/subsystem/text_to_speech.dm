@@ -115,7 +115,6 @@ SUBSYSTEM_DEF(tts)
 		"student robotist" = "Студент-робототехник",
 		"biomechanical engineer" = "Биомеханический инженер",
 		"mechatronic engineer" = "Инженер мехатроники",
-		"ripperdoc" = "Рипер",
 		"head of security" = "Глава службы безопасности",
 		"warden" = "Смотритель",
 		"detective" = "Детектив",
